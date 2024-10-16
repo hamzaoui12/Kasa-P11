@@ -5,10 +5,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "@/styles/index.scss";
 import HomePage from "@/pages/home.jsx";
 import { routes } from "@/routes.js";
+import MainLayout from "@/components/layout/MainLayout.jsx";
+
 
 const router = createBrowserRouter([
     {
       path: routes.home,
+      element: <MainLayout />,
       children: [
         {
           index: true,
