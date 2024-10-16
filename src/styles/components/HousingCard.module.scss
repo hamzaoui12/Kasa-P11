@@ -1,0 +1,47 @@
+.housingCardContainer {
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+
+  &::after {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    background-color: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    border-radius: 1rem;
+  }
+
+  .title {
+    z-index: 2;
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: 800;
+    bottom: 1rem;
+    left: 1rem;
+    color: white;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .housingCardContainer {
+    img {
+      height: 300px;
+    }
+
+    .title {
+      font-size: 1.4rem;
+    }
+  }
+  
+}
