@@ -1,6 +1,6 @@
 import styles from "@/styles/components/NavBar.module.scss";
 
-
+import { routes } from "@/routes.js";
 import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
@@ -13,7 +13,7 @@ const NavBar = () => {
             <NavLink >Accueil</NavLink>
           </li>
           <li>
-            <NavLink >A propos</NavLink>
+            <NavLink to={routes.about}>A propos</NavLink>
           </li>
         </ul>
       </nav>
