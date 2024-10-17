@@ -1,0 +1,52 @@
+.notFoundContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 70vh;
+  padding: 4rem 0;
+
+  h1 {
+    margin: 0;
+    font-size: 13rem;
+    font-weight: 900;
+    color: #f65d5d;
+    letter-spacing: 0.3rem;
+  }
+
+  .description {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #f65d5d;
+  }
+
+  .redirect {
+    font-size: 1.3rem;
+    font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .notFoundContainer {
+
+
+    h1 {
+      position: relative;
+      top: 4rem;
+      font-size: 6rem;
+    }
+
+    .description {
+      text-align: center;
+      font-size: 1.3rem;
+      width: 80%;
+    }
+
+    .redirect {
+      font-size: 1rem;
+    }
+  }
+  
+}
