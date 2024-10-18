@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { routes } from "@/routes";
 import housingsData from "@/data/housings.json";
+import Accordion from "@/components/housing/Accordion";
+
 const HousingDetailPage = () => {
   const navigate = useNavigate();
   const { id } = useParams();
@@ -57,6 +59,10 @@ const HousingDetailPage = () => {
               <img src={housing.host.picture} alt={housing.host.name} />
             </div>
           </div>
+        </div>
+        <div className={styles.block3}>
+          <Accordion title="Description" content={housing.description} />
+          <Accordion title="Equipements" content={housing.equipments} />
         </div>
       </div>
     </div>
