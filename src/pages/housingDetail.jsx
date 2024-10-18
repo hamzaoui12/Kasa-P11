@@ -43,6 +43,11 @@ const HousingDetailPage = () => {
           </div>
         </div>
         <div className={styles.block2}>
+        <div className={styles.tags}>
+            {housing.tags.map((tag) => {
+              return <span key={tag}>{tag}</span>;
+            })}
+          </div>
           <div className={styles.ratingAndHost}>
             <div className={styles.hostMobile}>
               <div>
