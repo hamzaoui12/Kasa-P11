@@ -2,8 +2,10 @@ import styles from "@/styles/pages/HousingDetail.module.scss";
 
 import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+
 import { routes } from "@/routes";
 import housingsData from "@/data/housings.json";
+import Carousel from "@/components/housing/Carousel";
 import Accordion from "@/components/housing/Accordion";
 
 const HousingDetailPage = () => {
@@ -30,6 +32,7 @@ const HousingDetailPage = () => {
 
   return (
     <div className={styles.housingDetailContainer}>
+      <Carousel pictures={housing.pictures} />
       <div className={styles.informations}>
         <div className={styles.block1}>
           <div className={styles.location}>
