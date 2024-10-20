@@ -6,6 +6,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { routes } from "@/routes";
 import housingsData from "@/data/housings.json";
 import Carousel from "@/components/housing/Carousel";
+import StarRating from "@/components/housing/StarRating";
 import Accordion from "@/components/housing/Accordion";
 
 const HousingDetailPage = () => {
@@ -54,6 +55,7 @@ const HousingDetailPage = () => {
             })}
           </div>
           <div className={styles.ratingAndHost}>
+          <StarRating rating={housing.rating} />
             <div className={styles.hostMobile}>
               <div>
                 <p>{firstName}</p>
