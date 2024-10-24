@@ -4,16 +4,15 @@ import { Outlet } from "react-router-dom";
 import NavBar from "@/components/ui/NavBar";
 import Footer from "@/components/ui/Footer";
 
-
 const MainLayout = () => {
   return (
-    <>
-      <main className={styles.layoutContainer}>
+    <main>
+      <div className={styles.layoutContainer}>
         <NavBar />
         <Outlet />
-      </main>
+      </div>
       <Footer />
-    </>
+    </main>
   );
 };
 
